@@ -1,10 +1,10 @@
 import requests
 import threading
+import PyTelegramBotAPI
 from datetime import datetime, timedelta
 from telebot import TeleBot
-from telebot import types
+from PyTelegramBotAPI import message_handler
 import telebot
-import Telebot
 import os
 import random
 import string
