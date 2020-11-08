@@ -1,5 +1,4 @@
 requests
-threading
 telebot
 os
 random
