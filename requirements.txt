@@ -1,5 +1,3 @@
 requests
 telebot
-os
-random
 string
