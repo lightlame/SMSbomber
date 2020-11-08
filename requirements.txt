@@ -1,5 +1,4 @@
 requests
-_thread
 datetime
 timedelta
 TeleBot
