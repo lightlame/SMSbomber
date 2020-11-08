@@ -3,5 +3,4 @@ datetime
 timedelta
 TeleBot
 telebot
-os
 string
