@@ -403,14 +403,10 @@ def handle_message_received(message):
 
   adm = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
   a = types.KeyboardButton(text='Рассылка')
-  b = types.KeyboardButton(text='Предложить рекламу')
-  c = types.KeyboardButton(text='Добавить партнер')
-  d = types.KeyboardButton(text='Удалить партнера')
   vpn = types.KeyboardButton(text = 'Обновить VPN')
-  sub = types.KeyboardButton(text = 'Изменить ссылку на канал')
   file = types.KeyboardButton(text = 'Dump DB')
   e = types.KeyboardButton(text = 'Назад')
-  adm.add(a, b, c, d, vpn, sub, file, e)
+  adm.add(a,vpn, file, e)
         
   chat_id = int(message.chat.id)
   text = message.text
