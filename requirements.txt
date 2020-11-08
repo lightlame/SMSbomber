@@ -1,2 +1,7 @@
+aiogram
+aiohttp
+websockets
+pymongo
+dnspython
 requests
-telebot
+colorama
