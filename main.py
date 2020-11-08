@@ -3,7 +3,6 @@ import threading
 from datetime import datetime, timedelta
 from telebot import TeleBot
 from telebot import types
-from telebot import message_handler
 import telebot
 import Telebot
 import os
