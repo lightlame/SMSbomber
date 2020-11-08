@@ -1,7 +1,8 @@
-aiogram
-aiohttp
-websockets
-pymongo
-dnspython
-requests
-colorama
+import requests
+import threading
+datetime
+timedelta
+TeleBot
+telebot
+os
+string
