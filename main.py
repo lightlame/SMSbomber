@@ -2,6 +2,7 @@ import requests
 import threading
 from datetime import datetime, timedelta
 from telebot import TeleBot
+from telebot import types
 import telebot
 import os
 import random
