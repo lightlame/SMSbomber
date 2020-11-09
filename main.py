@@ -407,7 +407,7 @@ def handle_message_received(message):
   if user_status == 'member' or user_status == 'administrator' or user_status == 'creator':
 
 
-    elif text == 'ℹ️Информация':
+    if text == 'ℹ️Информация':
     bot.send_message(chat_id, 'создал хуйню - @lightlame')
 
     elif text == 'Захуярить':
