@@ -77,16 +77,6 @@ def subchan(message):
 
 
 
-def postsRES():
-    f = open("friend.txt", mode="w", encoding="utf-8")
-    f.write("""
-     Реклама - 🤝Наш партнёр
-  24 часа (1 день) + 1 рассылка - 200₽
-  48 часов (2 дня) + 1 рассылка - 250₽
-  120 часов (5 дней) + 1 рассылка - 400₽
-  Ваш текст будет во вкладке 🤝Наш партнёр""")
-    f.close()
-
 
 
 
@@ -418,7 +408,7 @@ def handle_message_received(message):
 
 
     elif text == 'ℹ️Информация':
-    bot.send_message(chat_id, 'создал хуйню - @lightlame \n \n ')
+    bot.send_message(chat_id, 'создал хуйню - @lightlame')
 
     elif text == 'Захуярить':
     bot.send_message(chat_id, 'Кого хуярим? :\n🇷🇺 79xxxxxxxxx\n🇺🇦 380xxxxxxxxx')
