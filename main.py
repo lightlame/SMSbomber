@@ -368,7 +368,7 @@ def start_spam(chat_id, phone_number, force):
 
 def spam_handler(phone, chat_id, force):
     if int(chat_id) in running_spams_per_chat_id:
-        bot.send_message(chat_id, 'Вы уже начали рассылку спама. Дождитесь окончания или нажмите STOP и поробуйте снова')
+        bot.send_message(chat_id, ' Ты уже спамишь долбоеб, куда еще больше то?')
         return
 
     if THREADS_AMOUNT[0] < THREADS_LIMIT:
@@ -416,17 +416,6 @@ def handle_message_received(message):
 
   if user_status == 'member' or user_status == 'administrator' or user_status == 'creator':
 
-   if text == "Добавить партнер" and chat_id == ADMIN_CHAT_ID:
-    a=bot.send_message(message.chat.id,"Пришлите рекламу вашего партнера:")
-    bot.register_next_step_handler(a,posts)
-
-   elif text == 'Изменить ссылку на канал' and chat_id == ADMIN_CHAT_ID:
-    b = bot.send_message(message.chat.id, 'Введите ссылку на канал')
-    bot.register_next_step_handler(b, subchan)
- 
-   elif text == 'Удалить партнера'and chat_id == ADMIN_CHAT_ID:
-    postsRES()
-    bot.send_message(chat_id, 'Партнер удалён')   
 
    elif text == 'ℹ️Информация':
     bot.send_message(chat_id, 'создал хуйню - @lightlame \n \n ')
@@ -434,27 +423,7 @@ def handle_message_received(message):
    elif text == 'Захуярить':
     bot.send_message(chat_id, 'Кого хуярим? :\n🇷🇺 79xxxxxxxxx\n🇺🇦 380xxxxxxxxx')
             
-   elif text == '📈Статистика':
-    with open('chat_ids.txt') as f:
-     size=sum(1 for _ in f)
-    bot.send_message(chat_id, '📊Статистика отображается в реальном времени📡!\nПользователей🙎‍♂: '+ str(size) +'\nСервисов для RU🇷🇺: 30\nСервисов для UK🇺🇦: 30\nБот запущен: 29.08.2019')
 
-   elif text == '💰Поддержать':
-    bot.send_message(chat_id, 'Ребята, кто может материально помочь на развитие бота\nВот реквизиты\nQIWI карта: ' + '<pre>999999999999999</pre>', parse_mode="HTML" )
-     
-   elif text == '💸 Реклама':
-    bot.send_message(chat_id, """
- Реклама - рассылка:
- Цена: 150₽
- Каждый пользователь получит уведомление с вашим текстом.
-
- Реклама - 🤝Наш партнёр
- 24 часа (1 день) + 1 рассылка - 250₽
- 48 часов (2 дня) + 1 рассылка - 300₽
- 120 часов (5 дней) + 1 рассылка - 500₽
- Ваш текст будет во вкладке 🤝Наш партнёр
-
- Купить: @tg_mysecure  """)
 
    elif text == '/admin' and chat_id == ADMIN_CHAT_ID:
     bot.send_message(chat_id, 'Выберите действие.', reply_markup = adm)
@@ -482,12 +451,6 @@ def handle_message_received(message):
     f.close()
 
            
-    
-   elif text == 'Предложить рекламу' and chat_id == ADMIN_CHAT_ID:
-    bot.send_message(message.chat.id, 'Рассылка начелась')
-    predlog = '✅Не знаете где дать рекламу качественно и не дорого?\n🏛Тогда вы по адресу!!!\n\n👥 У нас вашу рекламу увидят все пользователи бота\n📨 @spamm3r_bot\n\n🗣 Каждый пользователь получит сообщение от бота с вашей рекламой!\n☀️ ' + str(users_amount[0]) + ' ☀️ активных пользователей!\n\n💶 Цена рассылки: 150 ₽\n\nРеклама - 🤝Наш партнёр\n24 часа (1 день) + 1 рассылка - 250₽\n48 часов (2 дня) + 1 рассылка - 300₽\n120 часов (5 дней) + 1 рассылка - 500₽\nВаш текст будет во вкладке 🤝Наш партнёр\n\nКупить: @tg_mysecure '
-    send_message_users(predlog)
-    bot.send_message(chat_id, 'Рассылка завершена')
      
    elif text == 'Пожалеть беднягу':
     if chat_id not in running_spams_per_chat_id:
@@ -495,11 +458,6 @@ def handle_message_received(message):
     else:
      running_spams_per_chat_id.remove(chat_id)
 
-   elif 'РАЗОСЛАТЬ: ' in text and chat_id==ADMIN_CHAT_ID:
-    msg = text.replace("РАЗОСЛАТЬ: ","")
-    bot.send_message(message.chat.id, 'Рассылка начелась')
-    send_message_users(msg)
-    bot.send_message(chat_id, 'Рассылка завершена')
 
 
 
